@@ -125,7 +125,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "spell check when writing commit logs
-autocmd filetype svn,*commit* setlocal spell
+" autocmd filetype svn,*commit* setlocal spell " broken dunon why
 
 " red column at 80 characters
 set colorcolumn=80
