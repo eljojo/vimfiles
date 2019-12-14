@@ -3,47 +3,42 @@
 set nocompatible
 filetype off " required for Vundle
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" setup plug
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plug 'tpope/vim-sensible'
+Plug 'vim-ruby/vim-ruby'
+Plug 'scrooloose/syntastic'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-rails'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-endwise'
+Plug 'vim-scripts/delimitMate.vim'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-bundler'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-commentary'
+" Plug 'mustache/vim-mustache-handlebars'
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-surround'
+Plug 'bkad/CamelCaseMotion'
+" Plug 'derekwyatt/vim-scala'
+Plug 'ngmy/vim-rubocop'
+Plug 'eapache/rainbow_parentheses.vim'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'janko-m/vim-test'
+Plug 'Yggdroot/indentLine'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 
-Plugin 'tpope/vim-sensible'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'scrooloose/syntastic'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-rails'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-endwise'
-Plugin 'vim-scripts/delimitMate.vim'
-" Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-bundler'
-Plugin 'rking/ag.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'fatih/vim-go'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-commentary'
-" Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'tpope/vim-surround'
-Plugin 'bkad/CamelCaseMotion'
-" Plugin 'derekwyatt/vim-scala'
-Plugin 'ngmy/vim-rubocop'
-Plugin 'eapache/rainbow_parentheses.vim'
-Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'pangloss/vim-javascript'
-" Plugin 'mxw/vim-jsx'
-" Plugin 'janko-m/vim-test'
-Plugin 'Yggdroot/indentLine'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plugin 'junegunn/fzf.vim'
-
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start

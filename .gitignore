@@ -7,4 +7,5 @@ backup/*
 projects/*
 .netrwhist
 UltiSnips/*
-bundle/*
+autoload/*
+plugged/*
